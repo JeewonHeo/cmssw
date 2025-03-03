@@ -9,7 +9,8 @@ lumiTable = cms.EDProducer("SimpleOnlineLuminosityFlatTableProducer",
     doc  = cms.string("Online luminosity information"),
     variables = cms.PSet(
         instLumi = Var( "instLumi()", "double", doc = "Instantaneous luminosity"),
-        avgPileUp = Var( "avgPileUp()", "double", doc = "Average PU")
+        avgPileUp = Var( "avgPileUp()", "double", doc = "Average PU"),
+        timestamp = Var( "timestamp().unixTime()", "uint", doc = "Time Stamp")
     )
 )
 
